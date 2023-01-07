@@ -12,10 +12,7 @@ body {
   align-items: center;
   background-image: url();
   font-family: "Roboto", sans-serif;
-  background-image: url(assets/brokenClouds.jpg);
-  background-size: 158%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #845EC2;
 }
 
 i {
@@ -28,18 +25,17 @@ span {
 }
 
 .containerWeatherApp {
-  border-radius: 20px;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  padding: 2rem;
-  background-color: rgba(119, 117, 117, 0.301);
+  padding: 1.5rem;
+  background-color:#6C48A9;
+  color: #FBEAFF;
 }
 
 .ubicationDetails {
-  border-radius: 20px;
   padding: 1rem;
 }
 
@@ -49,23 +45,30 @@ span {
   justify-content: space-between;
 }
 
-
 .ubicationInfo h4 {
   text-align: center;
   font-weight: 700;
   padding: 1rem;
 }
 
+.fa-location-dot,
+.fa-globe {
+  color: rgb(175, 163, 163);
+}
+
 .nameCity {
   font-weight: 700;
   font-size: 50px;
-  border-bottom: 1px solid gray;
+  border-bottom: 3px solid silver;
+  margin-bottom: 1rem;
+  color: whitesmoke;
 }
 
 .nameCountry {
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 20px;
+  color: rgb(255, 255, 255);
 }
 
 .iconAndDescription {
@@ -80,24 +83,24 @@ span {
 }
 
 .information {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-    gap: .5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .information > div {
-    display: flex;
+  display: flex;
 }
 
 .information i {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .information p {
-    width: 100%;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid gray;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .information span {
@@ -139,17 +142,82 @@ span {
   color: orange;
 }
 
-.fa-cloud{
+.fa-cloud {
   font-size: 70px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: silver;
 }
 
 @keyframes load {
-  0% { top: 0; }
-  50% { top: -40px; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -40px;
+  }
+  100% {
+    top: 0;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .containerWeatherApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nameCity {
+    font-size: 30px;
+  }
+
+  .nameCountry {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .fa-location-dot {
+    font-size: 25px;
+  }
+
+  .fa-globe {
+    font-size: 15px;
+  }
+
+  .fa-x,
+  .fa-y,
+  .lon,
+  .lat {
+    font-size: 16px;
+  }
+
+  .iconWeather {
+    width: 100px;
+  }
+
+  .iconWeather ~ p {
+    font-size: 18px; 
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .information {
+    background: #798a9b7e;
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .information * {
+    font-size: 13px;
+  }
+}
+
+/* 
+quedamos en los iconos de las coordenadas
+presentan un problema, posiblemente de herencia, tal vez son estilos en linea
+
+*/

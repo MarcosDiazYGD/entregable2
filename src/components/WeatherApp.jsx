@@ -21,22 +21,21 @@ const WeatherApp = () => {
             {apiRes.name}
             <i
               class="fa-solid fa-location-dot"
-              style={{ fontSize: "40px", color: "gray" }}
             ></i>
           </h1>
 
           <h4 className="nameCountry">
             {apiRes.sys?.country}
-            <i className="fa-solid fa-globe" style={{ fontSize: "22px" }}></i>
+            <i className="fa-solid fa-globe" ></i>
           </h4>
           <p>
-            <span>
-              <i class="fa-solid fa-x" style={{ fontSize: "16px" }}></i>Lon:{" "}
+            <span className="lon">
+              <i class="fa-solid fa-x" ></i>Lon:{" "}
             </span>{" "}
             {apiRes.coord?.lon}
             <br />
-            <span>
-              <i class="fa-solid fa-y" style={{ fontSize: "16px" }}></i>Lat:{" "}
+            <span className="lat">
+              <i class="fa-solid fa-y" ></i>Lat:{" "}
             </span>{" "}
             {apiRes.coord?.lat}
           </p>

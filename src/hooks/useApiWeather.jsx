@@ -4,7 +4,8 @@ import images from "../assets/images";
 
 const useApiWeather = () => {
   const [apiRes, setApiRes] = useState({});
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  console.log(apiRes);
 
   const convertToFahrenheit = (value) => {
     let result = Math.round((value - 273.15) * 1.8 + 32.0);
